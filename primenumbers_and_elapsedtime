@@ -1,0 +1,17 @@
+import numpy as np
+import math
+import timeit
+
+start = timeit.timeit()
+print(start)
+
+for i in range(2, 501):
+    is_prime = True
+    for h in range(2, math.ceil(np.sqrt(i))):
+        if (i % h) == 0:
+            is_prime = False
+    if is_prime == True:
+        print(i)
+end = timeit.timeit()
+print(end)
+print(end - start)
